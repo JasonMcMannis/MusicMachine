@@ -1,0 +1,95 @@
+body {
+  padding: 10px;
+  font-family: OCR A Std, monospace;
+  background-color: #000080;
+  background-image: linear-gradient(to bottom, #000080, #00BFFF 100%);
+  background-attachment: fixed;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  padding: 0;
+  margin: 0;
+
+  font-size: 14px;
+}
+
+header {
+
+  
+  padding: 5px;
+  position: relative;
+  margin-bottom: 3rem;
+  border-radius: 1rem;
+  
+}
+
+.author {
+  font-size: 1.5rem;
+  color: #F0F8FF;
+}
+
+.machine-navbar {
+  font-size: 3rem;
+  color: #F0F8FF;
+}
+
+.css-song-name {
+  width: 80%;
+  text-align: left;
+  background:  #FFFFFF;
+  border: solid 2px #90a4ae;
+  color: #607d8b;
+  font-size: 1.5rem;
+}
+
+#slider {
+  background:#9e9e9e;
+}
+
+.slider{
+  border: 1px solid #212121;
+}
+
+.slider-value {
+  color: #FFFFFF;
+  font-size: 2rem;
+}
+
+
+.btn-Default {
+  width: 40px;
+  height: 40px;
+  padding: 3px 1px;
+  border-radius: 25px;
+  border-width: 0px;
+          
+}
+
+.btn-lg {
+  width: 45px;
+  height: 45px;
+  padding: 1px 2px;
+  border-radius: 25px;
+  border-width: 0px;      
+}
+
+.machine-container, .slider-container, .btns-container {
+  border: 2px solid #607d8b;
+  padding: 15px;
+  background-color: #B22222;
+  border-radius: 1rem;
+}
+
+#myid.slider-container, #myid.btns-container {
+  background-color: #FFFFFF;
+}
+
+.current-speed {
+  color: #FFFFFF;
+  font-size: 2rem;
+}
+

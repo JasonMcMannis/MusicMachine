@@ -1,0 +1,118 @@
+<template name="playground">
+
+  <header>
+    <p class="text-center"><span class="machine-navbar">Music Mixer Machine - </span><span class="author">By: Jason McMannis (2020)</span></p>
+  </header>
+
+  <!-- Remember - if you want to control functions globaly, don't declare them as var. Just name them. -->
+
+  <div class="container machine-container">
+
+    {{#if startdac }}
+        <i class="btn btn-xl btn-danger js-masterButton glyphicon glyphicon-off fa-3x"></i>
+    {{else}}
+        <i class="btn btn-xl btn-success js-masterButton glyphicon glyphicon-music fa-3x"></i>
+    {{/if}}
+
+    <br /><br />
+
+    <div class="slider-container" id="myid">
+        <h3>Track Speed</h3>
+      <div class="slider" id="slider"></div>
+    </div>
+    
+    <br>
+    <span class="current-speed">Current Speed = </span><span class="slider-value">{{sliderValue}}</span>
+
+    <div class="btns-container" id="myid">
+      <div class="row">
+        <div class="col-xs-4"><button class="btn btn-md css-song-name">Arpegios</button></div>
+        <div class="col-xs-2">
+            {{#if arp}}
+                <i class="fa fa-stop fa-2x btn-default js-controlArp" aria-hidden="true"></i>
+            {{else}}
+                <i class="fa fa-play fa-2x btn-default js-controlArp" aria-hidden="true"></i>
+            {{/if}}
+        </div>
+
+        <div class="col-xs-4"><button class="btn btn-md css-song-name">Cymbal</button></div>
+        <div class="col-xs-2">
+            {{#if cymbal}}
+                <i class="fa fa-stop fa-2x btn-default js-controlCymbal" aria-hidden="true"></i>
+            {{else}}
+                <i class="fa fa-play fa-2x btn-default js-controlCymbal" aria-hidden="true"></i>
+            {{/if}}
+        </div>
+      </div>
+
+      <br />
+
+      <div class="row">
+        <div class="col-xs-4"><button class="btn btn-md css-song-name">Bassline</button></div>
+        <div class="col-xs-2">
+            {{#if bassline}}
+                <i class="fa fa-stop fa-2x btn-default js-controlBassline" aria-hidden="true"></i>
+            {{else}}
+                <i class="fa fa-play fa-2x btn-default js-controlBassline" aria-hidden="true"></i>
+            {{/if}}
+        </div>
+
+        <div class="col-xs-4"><button class="btn btn-md css-song-name">Drums</button></div>
+        <div class="col-xs-2">
+            {{#if drums}}
+                <i class="fa fa-stop fa-2x btn-default js-controlDrums" aria-hidden="true"></i>
+            {{else}}
+                <i class="fa fa-play fa-2x btn-default js-controlDrums" aria-hidden="true"></i>
+            {{/if}}
+        </div>
+      </div>
+
+      <br />
+
+      <div class="row">
+        <div class="col-xs-4"><button class="btn btn-md css-song-name">Bass line 32</button></div>
+        <div class="col-xs-2">
+            {{#if bass32}}
+                <i class="fa fa-stop fa-2x btn-default js-controlBass32" aria-hidden="true"></i>
+            {{else}}
+                <i class="fa fa-play fa-2x btn-default js-controlBass32" aria-hidden="true"></i>
+            {{/if}}
+        </div>
+
+        <div class="col-xs-4"><button class="btn btn-md css-song-name">Snare Drum</button></div>
+        <div class="col-xs-2">
+            {{#if snare}}
+                <i class="fa fa-stop fa-2x btn-default js-controlSnare" aria-hidden="true"></i>
+            {{else}}
+                <i class="fa fa-play fa-2x btn-default js-controlSnare" aria-hidden="true"></i>
+            {{/if}}
+        </div>
+      </div>
+
+      <br />
+
+      <div class="row">
+        <div class="col-xs-4"><button class="btn btn-md css-song-name">Hi Hat</button></div>
+        <div class="col-xs-2">
+            {{#if hihat}}
+                <i class="fa fa-stop fa-2x btn-default js-controlHihat" aria-hidden="true"></i>
+            {{else}}
+                <i class="fa fa-play fa-2x btn-default js-controlHihat" aria-hidden="true"></i>
+            {{/if}}
+        </div>
+
+        <div class="col-xs-4"><button class="btn btn-md css-song-name">Bass Drum</button></div>
+        <div class="col-xs-2">
+            {{#if bassdrum}}
+                <i class="fa fa-stop fa-2x btn-default js-controlBassdrum" aria-hidden="true"></i>
+            {{else}}
+                <i class="fa fa-play fa-2x btn-default js-controlBassdrum" aria-hidden="true"></i>
+            {{/if}}
+        </div>
+      </div>
+
+      </div>
+    </div>
+    <h2> {{startdac}} {{arp}} {{cymbal}} {{bassline}} {{drums}} {{bass32}} {{snare}} {{hihat}} {{bassdrum}}</h2>
+  
+</template>
